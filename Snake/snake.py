@@ -1,5 +1,4 @@
-import pygame
-import random
+import pygame, random 
 from pygame.locals import *
 
 UP = 0
