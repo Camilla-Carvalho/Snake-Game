@@ -1,5 +1,4 @@
-import pygame
-import random
+import pygame, random 
 from pygame.locals import *
 
 UP = 0
@@ -28,6 +27,16 @@ while True:
     for event in pygame.event.get():  # Tratamento de escolhas
         if event.type == quit:
             pygame.quit()
+
+    if my_direction == UP:
+        snake[0] = (snake[0][0], snake[0][1] - 10)
+    if my_direction == DOWN:
+        snake[0] = (snake[0][0], snake[0][1] + 10)
+    if my_direction == LEFT:
+        snake[0] = (snake[0][0] - 10, snake[0][1])
+    if my_direction == RIGHT:
+        snake[0] = (snake[0][0] + 10, snake[0][1])
+
 
     screen.fill(0, 0, 0)
     screen.pygame.Surface.blit(apple, apple_pos)
